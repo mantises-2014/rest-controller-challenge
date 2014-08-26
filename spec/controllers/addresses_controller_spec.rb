@@ -10,6 +10,7 @@ describe "Addresses Controller" do
   it "creates addresses" do
     visit "/contacts/#{@joe.id}"
     click_link "New Address"
+
     fill_in "Street", with: "123 happy trail"
     fill_in "City", with: "Cincinnati"
     fill_in "State", with: "Ohio"

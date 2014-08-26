@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <title></title>
+</head>
+<body>
+  <div class="container">
+  <h1>Edit contact</h1>
+  <form action="/contacts/230/addresses/93" method="POST">
+    <input type="submit" value="DELETE" />
+  </form>
+  <form action="/contacts/230/addresses/93" method="POST">
+    <ul>
+  <li>
+    <label for="address_street">Street</label>
+    <input id="address_street" type="text" name="address[street]" value="334 golden street" />
+  </li>
+  <li>
+    <label for="address_city">City</label>
+    <input id="address_city" type="text" name="address[city]" value="" />
+  </li>
+  <li>
+    <label for="address_state">State</label>
+    <input id="address_state" type="text" name="address[state]" value="California" />
+  </li>
+  <li>
+    <label for="address_zip">Zip</label>
+    <input id="address_zip" type="text" name="address[zip]" value="" />
+  </li>
+
+  <li>
+    <input type="submit" value="Save" />
+  </li>
+</ul>
+
+  </form>
+</div>
+
+</body>
+</html>
