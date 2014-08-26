@@ -8,6 +8,7 @@ describe "Contacts controller" do
 
   it "retrieves contacts" do
     visit "/contacts"
+    # save_and_open_page
     expect(page).to have_content(@joe.name)
   end
 
