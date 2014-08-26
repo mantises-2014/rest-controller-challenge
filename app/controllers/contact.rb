@@ -1,4 +1,4 @@
-get '/contacts' do
+get '/contacts/?' do
   @contacts = Contact.all
 
   erb :"contacts/index"
@@ -30,15 +30,15 @@ post '/contacts' do
 end
 
 post '/contacts/:id' do |id|
-  if params["contact"]
-    @contact = Contact.find(id)
-    @contact.update(params["contact"])
+  @contact = Contact.find(id)
+  @contact.update(params["contact"])
 
-    redirect :"/contacts/#{id}"
-  else
-    Contact.find(id).destroy
+  redirect :"/contacts/#{id}"
+end
 
-    redirect :"/contacts"
-  end
+delete '/contacts/:id' do |id|
+  Contact.find(id).destroy
+
+  redirect :"/contacts"
 end
 
