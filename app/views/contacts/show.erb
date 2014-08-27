@@ -8,11 +8,14 @@
   Addresses:
   <% @contact.addresses.each do |address| %>
     <ul>
-      <li><a href="/contacts/<%= @contact.id %>/addresses/<%= address.id %>/edit"><%= address.street %></a></li>
+      <li><a href="/contacts/<%= @contact.id %>/addresses/<%= address.id %>/edit">
+        <%= address.street %></a></li>
       <li><%= address.city %></li>
       <li><%= address.state %></li>
       <li><%= address.zip %></li>
     </ul>
   <% end %>
   <a href="/contacts/<%= @contact.id %>/addresses/new">New Address</a>
+  <br><br>
+  <a href="/contacts">View Contacts</a>
 </div>
