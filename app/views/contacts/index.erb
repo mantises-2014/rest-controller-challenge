@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Contacts</h1>
+   <a href="/contacts/new">Create Contact</a>
   <% @contacts.each do |contact| %>
     <ul>
       <li><a href="/contacts/<%=contact.id %>"><%= contact.name %></a></li>
@@ -7,5 +8,4 @@
     </ul>
     <hr>
   <% end %>
-  <a href="/contacts/new">Create Contact</a>
 </div>
