@@ -9,7 +9,8 @@ get '/contacts/new' do
 end
 
 post '/contacts' do
-  Contact.create(params[:contacts])
+  @contact = Contact.create(params[:contacts])
+  @contact.save
   erb :'contacts/index'
 end
 
