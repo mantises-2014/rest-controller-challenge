@@ -5,5 +5,7 @@
   </form>
   <form action="/contacts/<%= @contact.id %>/addresses/<%= @address.id %>" method="POST">
     <%= erb :"addresses/_form", locals: { contact: @contact, address: @address } %>
+    <input type="hidden" name="_method" value="put">
+
   </form>
 </div>
